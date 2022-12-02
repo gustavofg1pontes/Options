@@ -5,7 +5,11 @@
         static void Main(string[] args)
         {
             Options opcoes = new Options();
-            opcoes.AddOpcao(new Option("Teste", ScreenManager.Screen1(opcoes)));
+
+            Screen Init = ScreenManager.TelaInicial(opcoes);
+
+            Init.Init();
+            Init.AddOpt();
 
             opcoes.EscreveOpcoes();
 

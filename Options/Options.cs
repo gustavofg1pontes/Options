@@ -56,6 +56,7 @@ namespace Options
                             break;
                         case ConsoleKey.Enter:
                             opcaoSelect = Opcoes[opcaoMarcada];
+                            opcaoMarcada = 0;
                             LimparOpcoes();
                             opcaoSelect.Tela.Init();
                             opcaoSelect.Tela.AddOpt();
