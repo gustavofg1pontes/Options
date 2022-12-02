@@ -29,7 +29,7 @@ namespace Options
                         () =>
                         {
                             Console.Clear();
-                            Console.WriteLine("oiia");
+                            Console.WriteLine("Oii");
                             Console.ReadKey();
                         }, () => { });
         }

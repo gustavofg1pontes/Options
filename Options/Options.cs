@@ -25,8 +25,6 @@ namespace Options
             {
                 if(Opcoes.IndexOf(opc) == opcaoMarcada) Console.ForegroundColor = ConsoleColor.Green;
                 else Console.ForegroundColor = ConsoleColor.White;
-                Console.Write("                                           ");
-                Console.CursorLeft = 0;
                 Console.WriteLine(opc.Texto.ToString());
                 Console.ForegroundColor = ConsoleColor.White;
             }
@@ -57,9 +55,9 @@ namespace Options
                             EscreveOpcoes();
                             break;
                         case ConsoleKey.Enter:
-                            Opcoes[opcaoMarcada].Tela.Init();
                             opcaoSelect = Opcoes[opcaoMarcada];
                             LimparOpcoes();
+                            opcaoSelect.Tela.Init();
                             opcaoSelect.Tela.AddOpt();
                             EscreveOpcoes();
                             break;
